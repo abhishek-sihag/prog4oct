@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Demo</title>
+    <style>
+        div {
+            padding: 100px;
+        }
+
+        .container {
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            /*grid-template-columns: 1fr 1fr 1fr;*/
+            grid-template-areas:
+                "item1 item1 item1"
+                "item2 item3 item3"
+                "item4 item5 item6"
+                "item7 item7 item7"
+                "item8 item9 item9";
+        }
+
+        .item1 {
+            grid-area: item1;
+            background-color: darkkhaki;
+        }
+
+        .item2 {
+            grid-area: item2;
+            background-color: antiquewhite;
+        }
+
+        .item3 {
+            grid-area: item3;
+            background-color: bisque;
+        }
+
+        .item4 {
+            grid-area: item4;
+            background-color: cadetblue;
+        }
+
+        .item5 {
+            grid-area: item5;
+            background-color: yellow;
+        }
+
+        .item6 {
+            grid-area: item6;
+            background-color: brown;
+        }
+
+        .item7 {
+            grid-area: item7;
+            background-color: violet;
+        }
+
+        .item8 {
+            grid-area: item8;
+            background-color: wheat;
+        }
+
+        .item9 {
+            grid-area: item9;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">Item1</div>
+        <div class="item2">Item2</div>
+        <div class="item3">Item3</div>
+        <div class="item4">Item4</div>
+        <div class="item5">Item5</div>
+        <div class="item6">Item6</div>
+        <div class="item7">Item7</div>
+        <div class="item8">Item8</div>
+        <div class="item9">Item9</div>
+    </div>
+</body>
+
+</html>

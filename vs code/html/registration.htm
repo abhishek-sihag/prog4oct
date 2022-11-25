@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+</head>
+
+<body>
+    <form style="margin-bottom: 20px;">
+        <label>Search</label></br>
+        <input type="search" placeholder="Enter employee name" />
+    </form>
+    <form>
+        <label>FirstName</label></br>
+        <input type="text" autofocus required name="firstName" id="firstName" placeholder="Enter First Name" /></br>
+        <label>Contact No</label></br>
+        <input type="tel" required id="contactNo" name="contactNo" placeholder="Enter Contact Number" /></br>
+        <label>Gender</label></br>
+        <label>Male</label>
+        <input type="radio" id="male" name="gender" />
+        <label>Female</label>
+        <input type="radio" id="female" name="gender" /></br>
+        <label>DOB</label></br>
+        <input type="date" /></br>
+        <label>Country</label></br>
+        <input id="country_name" name="country_name" type="text" list="country" /></br>
+        <datalist id="country">
+            <option value="India">
+            <option value="Australia">
+            <option value="USA">
+        </datalist>
+        <label>Postal Code</label></br>
+        <input type="number" pattern="[0-9]{6}" /></br>
+        <input type="checkbox" required id="terms" name="terms" checked />
+        <label>I Agree to Terms & Conditions</label></br>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

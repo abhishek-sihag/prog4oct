@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+        /* ID Selector */
+        #para2 {
+            font-family: cursive;
+            font-size: small;
+        }
+
+        /* Class Selector */
+        .blue {
+            color: blue;
+            text-transform: uppercase;
+        }
+
+        /* Attribute Selector*/
+        [href="http://google.com"] {
+            text-decoration: none;
+        }
+
+        /* Tag Selector */
+        ul {
+            list-style-type: none;
+        }
+
+        /* Group Selectors */
+        table,
+        th,
+        td {
+            border: solid 2px red;
+            border-collapse: collapse;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+        }
+
+        /*Child combinator*/
+        nav>ul>li>a {
+            text-decoration: none;
+        }
+
+        /**/
+        /* ol li {
+         background-color: brown;
+         } */
+        nav>ul {
+            display: flex;
+            flex-direction: row;
+            /*left, center, right, space-around, space-between, space-evenly */
+            justify-content: space-between;
+            background-color: coral;
+            padding: 15px;
+        }
+
+        nav>ul>li>a {
+            color: whitesmoke;
+        }
+
+        nav {
+            margin-bottom: 10px;
+        }
+
+        aside>ul>li {
+            margin-bottom: 15px;
+        }
+
+        aside>ul>li>a {
+            text-decoration: none;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            column-gap: 20px;
+        }
+
+        .mainarea {
+            grid-area: main;
+        }
+
+        .sidebar {
+            grid-area: side;
+        }
+
+        aside {
+            background-color: lightblue;
+        }
+
+        .ft {
+            display: grid;
+            grid-template-rows: 100%;
+            grid-template-columns: 35% 35% 30%;
+            column-gap: 10px;
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">ContactUs</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Paragraph</a></li>
+                <li><a href="#">OrderedList</a></li>
+                <li><a href="#">UnorderedList</a></li>
+                <li><a href="#">Table</a></li>
+            </ul>
+        </aside>
+        <main class="mainarea">
+            <p id="para1" class="blue">
+                It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout. The point of using
+                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop publishing packages and web page editors
+                now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum' will uncover many web sites still in their infancy. Various
+                versions have evolved over the years, sometimes by accident, sometimes on
+                purpose (injected humour and the like).
+            </p>
+            <p id="para2">
+                There are many variations of passages of Lorem Ipsum available, but the
+                majority have suffered alteration in some form, by injected humour, or
+                randomised words which don't look even slightly believable. If you are
+                going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+                generators on the Internet tend to repeat predefined chunks as necessary,
+                making this the first true generator on the Internet. It uses a dictionary
+                of over 200 Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable. The generated
+                Lorem Ipsum is therefore always free from repetition, injected humour, or
+                non-characteristic words etc.
+            </p>
+            <p id="para3" class="blue">
+                There are many variations of passages of Lorem Ipsum available, but the
+                majority have suffered alteration in some form, by injected humour, or
+                randomised words which don't look even slightly believable. If you are
+                going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+                generators on the Internet tend to repeat predefined chunks as necessary,
+                making this the first true generator on the Internet. It uses a dictionary
+                of over 200 Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable. The generated
+                Lorem Ipsum is therefore always free from repetition, injected humour, or
+                non-characteristic words etc.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DeptNo</th>
+                        <th>DeptName</th>
+                        <th>DeptLocation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td>Accounting</td>
+                        <td>New york</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Research</td>
+                        <td>Dallas</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Sales</td>
+                        <td>Chicago</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>Operations</td>
+                        <td>Boston</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <footer class="ft">
+        <div>
+            <a href="#">ContactUs</a>
+        </div>
+        <div>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="http://google.com">Google</a></li>
+                <li><a href="http://msn.com">MSN</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    </div>
+</body>
+
+</html>
